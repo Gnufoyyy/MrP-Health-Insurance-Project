@@ -13,7 +13,7 @@ This project implements **Multilevel Regression and Poststratification (MrP)** t
 Due to file size limits and data usage terms, the raw datasets are not included in this repository. Please follow these steps to reproduce the results:
 
 1. **Download Data:**
-   - **Survey Data:** Download the 2022 BRFSS Data (SAS Transport Format) from the [CDC Website](https://www.cdc.gov/brfss/annual_data/annual_2022.html). Rename it to `LLCP2022.XPT`.
+   - **Survey Data:** Download the 2022 BRFSS Data (SAS Transport Format) from the [CDC Website](https://www.cdc.gov/brfss/annual_data/annual_2022.html). Rename it to `LLCP2022.XPT_`.
    - **Census Data:** Download the 2022 ACS 1-Year PUMS data from [IPUMS USA](https://usa.ipums.org/). Select variables: `STATEFIP`, `AGE`, `SEX`, `RACE`, `HISPAN`, `HCOVANY`, `EDUC`, `PERWT`, `GQ`. Rename the csv file to `usa_00001.csv`.
 
 2. **Run Code:**
