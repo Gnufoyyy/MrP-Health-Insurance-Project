@@ -25,11 +25,30 @@ Due to file size limits and data usage terms, the raw datasets are not included 
 The analysis generates the following comparisons:
 - **Macro-level:** Comparing state-level estimates against ACS ground truth.
 - **Micro-level:** Evaluating RMSE and coverage in sparse demographic cells.
-### Comprehensive Comparison
-| RMSE Trend (4-Way) | The Accuracy-Utility Paradox |
+### 1. The Macro-Micro Paradox
+At the state level (Macro), MrP shows a systematic offset. However, at the granular demographic level (Micro), it provides 100% coverage and superior stability.
+
+| **Macro-level Bias (Mode Effect)** | **Micro-level Precision (Sparsity)** |
 | :---: | :---: |
-| <img src="output2.png" width="100%" /> | <img src="output3.png" width="100%" /> |
-| *MrP wins in sparse data* | *Complete Pooling (Green) fails* |
+| <img src="output.png" width="100%" /> | <img src="output1.png" width="100%" /> |
+| *MrP (Blue) has a systematic offset vs. Truth* | *Direct Est. (Red) explodes in variance; MrP is stable* |
+
+<br>
+
+### 2. Comprehensive 4-Way Comparison
+We extended the analysis to include Raking and Complete Pooling.
+
+**Performance Trend by Sample Size:**
+![4-Way Comparison](output2.png)
+> *Figure: As sample size decreases (left side), Direct Estimation (Orange) and Raking (Red) errors explode. MrP (Blue) maintains low error in sparse cells.*
+
+<br>
+
+### 3. The Accuracy-Utility Paradox
+**Why Complete Pooling Fails despite low RMSE:**
+<img src="output3.png" width="70%" />
+
+> *Figure: Complete Pooling (Green) achieves the lowest RMSE by predicting a flat line (zero variance), but it has **ZERO correlation** with the truth. In contrast, MrP (Blue, r=0.71) successfully recovers the structure of health disparities.*
 
 ## Author
 Lam Kiu Yeung
