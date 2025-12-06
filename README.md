@@ -25,18 +25,10 @@ Due to file size limits and data usage terms, the raw datasets are not included 
 The analysis generates the following comparisons:
 - **Macro-level:** Comparing state-level estimates against ACS ground truth.
 - **Micro-level:** Evaluating RMSE and coverage in sparse demographic cells.
-## Key Results
-
-### The Macro-Micro Paradox
-| Macro-level Bias (Mode Effect) | Micro-level Precision (Sparsity) |
-|:------------------------------:|:--------------------------------:|
-| ![Macro](output.png)           | ![Micro](output1.png)            |
-| *MrP has a systematic offset* | *MrP is stable in small cells* |
-
 ### Comprehensive Comparison
-| RMSE Trend (4-Way)             | The Accuracy-Utility Paradox     |
-|:------------------------------:|:--------------------------------:|
-| ![Trend](output2.png)          | ![Paradox](output3.png)          |
+| RMSE Trend (4-Way) | The Accuracy-Utility Paradox |
+| :---: | :---: |
+| <img src="output2.png" width="100%" /> | <img src="output3.png" width="100%" /> |
 | *MrP wins in sparse data* | *Complete Pooling (Green) fails* |
 
 ## Author
